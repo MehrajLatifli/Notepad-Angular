@@ -1,0 +1,61 @@
+<div style=" text-align: center;" class="form-group">
+
+
+  <div style="display: inline-block; vertical-align: middle;" *ngFor="let item of List_1Array" name="posttext"
+    id="posttext">
+
+    <div class="card" style="width: 18rem;">
+      <div id="mycard" #mycard  class="card-body" [style.background-color]="item.background">
+      <h1>
+        Title: {{item.title}}
+        <br>
+        Text: {{item.text}}
+      </h1>
+    </div>
+    </div>
+
+
+  </div>
+
+
+  <div style="display: inline-block; vertical-align: middle;" *ngFor="let item of List_2Array" name="posttext"
+  id="posttext">
+
+  <div class="card" style="width: 18rem;" >
+    <div id="mycard" #mycard  class="card-body" [style.background-color]="item.background" >
+
+      <h1>
+        Title: {{item.title}}
+
+      </h1>
+
+      <ul id="indexUl" *ngFor="let item2 of item.CheckedListArray">
+
+      <li  >
+
+        <h3>
+          {{item2.text}}
+          {{item2.checked}}
+        </h3>
+
+
+
+      </li>
+
+
+
+    </ul>
+  </div>
+  </div>
+
+
+</div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+</div>

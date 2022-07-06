@@ -1,0 +1,50 @@
+<br>
+
+<form [formGroup]="noteform" (ngSubmit)="addNote()">
+
+  <div style="text-align: center;" class="form-group">
+
+    <input style="display: inline-block; vertical-align: middle;" type="text" formControlName="title" name="title" id="title"  placeholder="Title">
+
+
+
+  </div>
+
+  <br>
+
+  <div style="text-align: center;" class="form-group">
+
+
+    <input style="display: inline-block; vertical-align: middle;" type="text" name="textarea" id="textarea"
+      formControlName="textarea" placeholder="Text">
+
+
+  </div>
+
+  <div style="text-align: center;" class="form-group">
+    <select #checkselect name="checkselect" id="checkselect">
+      <option value="true">true</option>
+      <option value="false">false</option>
+    </select>
+  </div>
+
+  <br>
+
+  <div style="text-align: center;" class="form-group ">
+
+    <button style="display: inline-block; vertical-align: middle;" type="submit" class="btn btn-success ">Add</button>
+
+
+    <button style="display: inline-block; vertical-align: middle;" type="button" class="btn btn-primary"
+      (click)="changeColor($event)">Color</button>
+
+    <button style="display: inline-block; vertical-align: middle;" type="button" class="btn btn-warning"  (click)="addtoList($event)">Add to
+      list {{subcount}}</button>
+  </div>
+
+
+
+</form>
+
+<br>
+
